@@ -1,0 +1,46 @@
+{
+  "name": "runql-snowflake",
+  "displayName": "RunQL Snowflake Connector",
+  "description": "Optional Snowflake connector for RunQL.",
+  "publisher": "runql",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Data Science",
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:runql.snowflake.openSetupGuide"
+  ],
+  "extensionDependencies": [
+    "runql.runql"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "runql.snowflake.openSetupGuide",
+        "title": "RunQL: Snowflake Setup Guide"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "snowflake-sdk": "^2.3.3"
+  }
+}
