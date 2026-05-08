@@ -12,3 +12,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - `SnowflakeAdapter` with query execution, non-query execution, and schema introspection (tables, columns, procedures, functions, parameters).
 - **Parse & Fill** action for importing JDBC/ODBC/TOML connection strings.
 - **RunQL: Snowflake Setup Guide** command and auto-opened setup instructions on first install.
+
+## [1.1.0]
+
+### Added
+- Support for connection types in the RunQL Extension/IDE for selecting either data access or db admin connections.

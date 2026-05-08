@@ -54,6 +54,12 @@ On activation, this extension acquires the RunQL extension API and calls:
 
 The adapter wraps the [`snowflake-sdk`](https://www.npmjs.com/package/snowflake-sdk) Node package (pure JavaScript — no native binaries), so this extension ships as a single universal VSIX that installs on all platforms.
 
+## DB Admin connection type
+
+RunQL core supports an optional `data_access` / `db_admin` connection type for providers that explicitly opt in with `supports.dbAdminConnectionType`. This connector does not currently enable DB Admin mode, so no user-facing behavior changes are required for Snowflake connections.
+
+Before enabling DB Admin mode, the Snowflake adapter should define the admin-mode connection target and introspection contract, including which account, role, database, schema, `INFORMATION_SCHEMA`, and usage metadata surfaces are queried based on the active Snowflake role.
+
 ## Commands
 
 - **RunQL: Snowflake Setup Guide** — opens the key-pair setup instructions in an editor tab.
